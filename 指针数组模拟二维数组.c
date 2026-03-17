@@ -5,7 +5,7 @@ int main()
 	int arr2[] = { 2,3,4,5,6 };
 	int arr3[] = { 3,4,5,6,7 };
 	 
-  int* arr[] = { arr1,arr2,arr3 };
+  int* arr[] = { arr1,arr2,arr3 };  // 找出数组中首元素地址，创建指针数组；
 
 	int i = 0;
     for (i = 0; i < 3; i++)
