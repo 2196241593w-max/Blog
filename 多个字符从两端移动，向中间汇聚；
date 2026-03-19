@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <string.h>   //strlen
+#include <windows.h>  //Sleep
+#include <stdlib.h>    //system
+int main()   //多个字符从两端移动，向中间汇聚；（vs）
+{  
+	//eg: char arr[] = "abc";
+	// 实际存放   a b c \0
+	//下标        0 1 2 3
+	//strlen ；得出\0之前字符个数
+	char arr1[] = "hello bit!!!!!!!!!!!";
+	            // 0                strlen(arr)-1
+	char arr2[] = "####################";
+	int left = 0;
+	int right = strlen(arr1) - 1;
+	while (left <= right)
+	{
+		arr2[left] = arr1[left];
+		arr2[right] = arr1[right];
+		printf("%s\n", arr2);
+		Sleep(1000);          //休眠1000ms;
+		system("cls");        //清理控制台屏幕的信息；
+		left++;
+		right--;
+	}
+	printf("%s\n", arr2);
+	return 0;
+}
