@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
+#include <string.h>
 
 //方法1  递归法 （无第三方变量的创建）
 size_t my_strlen(const char* str)
